@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Manipulation Example</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    ul { list-style-type: disc; }
+    button { margin: 5px; padding: 8px 12px; }
+  </style>
+</head>
+<body>
+  <h2>Dynamic List Manipulation</h2>
+  <button id="addBtn">Add</button>
+  <button id="removeBtn">Remove</button>
+  <ul id="itemList">
+    <li>Initial Item</li>
+  </ul>
+
+  <script>
+    // Get references to DOM elements
+    const addBtn = document.getElementById('addBtn');
+    const removeBtn = document.getElementById('removeBtn');
+    const itemList = document.getElementById('itemList');
+    
+    // Function to add a new list item
+    function addListItem() {
+      // Create a new list item element
+      const newItem = document.createElement('li');
+      newItem.textContent = 'New Item';
+      // Append it to the unordered list
+      itemList.appendChild(newItem);
+    }
+    
+    // Function to remove the last list item
+    function removeListItem() {
+      // Check if there are list items to remove
+      if (itemList.lastElementChild) {
+        itemList.removeChild(itemList.lastElementChild);
+      }
+    }
+    
+    // Attach event listeners to buttons
+    addBtn.addEventListener('click', addListItem);
+    removeBtn.addEventListener('click', removeListItem);
+  </script>
+</body>
+</html>
