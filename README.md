@@ -1,4 +1,4 @@
-Here’s a **README** file format that combines the explanation and code for your project. It covers the DOM significance with dynamic list manipulation, the many-to-many relationship between Teacher and Student, along with Flask-SQLAlchemy code.
+It covers the DOM significance with dynamic list manipulation, the many-to-many relationship between Teacher and Student, along with Flask-SQLAlchemy code.
 
 ---
 
